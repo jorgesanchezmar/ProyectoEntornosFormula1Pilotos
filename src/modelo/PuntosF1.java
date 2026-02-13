@@ -2,6 +2,8 @@ package modelo;
 
 public class PuntosF1 extends CalculadorPuntos {
 	public int calcular(int posicion) {
+
+		// Distribución de puntos oficial de F1
 		switch (posicion) {
 		case 1:
 			return 25;
