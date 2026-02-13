@@ -9,6 +9,7 @@ public class Piloto {
 	private String[] logros = new String[5];
 	private int numLogros;
 
+	// Constructor inicializa todos los datos del piloto
 	public Piloto(int id, String nombre, String escuderia, int edad) {
 		this.id = id;
 		this.nombre = nombre;
@@ -38,10 +39,12 @@ public class Piloto {
 		return puntos;
 	}
 
+	// Solo gestiona sus propios datos, no decide carreras ni calcula puntos
 	public void sumarPuntos(int pts) {
 		this.puntos += pts;
 	}
 
+	// Permite añadir logros hasta un máximo de 5
 	public boolean añadirLogro(String logro) {
 		if (numLogros < 5) {
 			logros[numLogros++] = logro;
@@ -50,6 +53,7 @@ public class Piloto {
 		return false;
 	}
 
+	// Muestra los datos del piloto en consola
 	public void mostrarDatos() {
 		System.out.println("ID: " + id + " | " + nombre + " (" + escuderia + ")");
 		System.out.println("Edad: " + edad + " | Puntos: " + puntos);
